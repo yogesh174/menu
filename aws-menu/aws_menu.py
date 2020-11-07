@@ -1,14 +1,7 @@
 #!/usr/bin/python3
-import subprocess
 import os
-import shlex
 import boto3
-import json
-import datetime
-import pandas as pd
-import time
 from prettytable import PrettyTable
-from subprocess import check_call
 from botocore.exceptions import ClientError
 from Ec2Instances import *
 from Ec2Volumes import *
