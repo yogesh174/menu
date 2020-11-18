@@ -86,7 +86,10 @@ while True:
     elif option == "remove an LV" :
         os.system('clear')
         lv_name = input("Enter the LV name: ")
-        op = remove_lv(lv_name)
+        vg_name = input("Enter the VG name: ")
+
+        lv_path = f"/dev/mapper/{vg_name}-{lv_name}"
+        op = remove_lv(lv_path)
         input("Press Enter to continue")
         os.system('clear')
         
@@ -226,7 +229,7 @@ while True:
         lv_path = f"/dev/mapper/{vg_name}-{lv_name}"
         op = unmount_lv(lv_path)
         os.system('clear')
-        os.system("Unmounted Successfully")
+        print("Unmounted Successfully")
         # print(op)
         input("Press Enter to continue")
         os.system('clear')

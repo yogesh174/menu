@@ -21,8 +21,9 @@ def remove_vg(vg_name):
     op = subprocess.getoutput("vgremove {}".format(vg_name))
     return op
 
-def remove_lv(lv_name):
-    op = os.system("lvremove {}".format(lv_name))
+def remove_lv(lv_path):
+    unmount_lv(lv_path)
+    op = os.system("lvremove {}".format(lv_path))
     return op
 
 
