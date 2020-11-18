@@ -1,5 +1,4 @@
 from linux_cmds import *
-from lvm_commands import *
 
 main_menu = ["create an folder", "show present directory", 
             "show ip address", "show date",

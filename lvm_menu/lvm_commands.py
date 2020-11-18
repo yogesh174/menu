@@ -89,3 +89,20 @@ def reduce_lv_and_format(new_size, lv_path, mount_path):
 def disk_space():
     op = subprocess.getoutput("df -h")
     return op
+
+def ask_choice():
+    while True:
+        try:
+            option = int(input("Enter your option: "))
+            break
+        except ValueError:
+            print("Enter a valid number")
+    return option
+
+def change_color(x):
+    cmd = f"tput setaf {x}"
+    os.system(cmd)
+
+def mkdir(name):
+    a = os.system("mkdir {}".format(name))
+    return a
